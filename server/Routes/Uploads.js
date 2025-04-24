@@ -94,7 +94,7 @@ router.post("/", upload.single("resume"), async (req, res) => {
 
         res
           .status(200)
-          .json({ message: "Resume parsed and stored!", resume: newResume });
+          .json({ message: "Resume parsed and stored !", resume: newResume });
       } catch (parseError) {
         console.error("JSON parse error:", parseError);
         res.status(500).json({ message: "Invalid response from Python" });
